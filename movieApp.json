@@ -4,10 +4,10 @@
         "register":"/register",
         "addMovie": "/addMovie",
         "getAllMovies":"/getMovies",
-        "getMovieById":"/getMovie",
-        "updateMovie":"/updateMovie",
-        "deleteMovie":"/deleteMovie",
-        "addMovieComment":"/addComment",
-        "getMovieComments":"/getComments"
+        "getMovieById":"/:id/getMovie",
+        "updateMovie":"/:id/updateMovie",
+        "deleteMovie":"/:id/deleteMovie",
+        "addMovieComment":"/:id/addComment",
+        "getMovieComments":"/:id/getComments"
     }
 }
