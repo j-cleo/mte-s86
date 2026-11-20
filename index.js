@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
-// const userRoutes = require("./routes/user.js");
-// const workoutRoutes = require("./routes/workout.js");
+const userRoutes = require("./routes/user.js");
+const movieRoutes = require("./routes/movie.js");
 
 const port = 4000;
 const app = express();
@@ -17,8 +17,8 @@ db.on("error", console.error.bind(console, "Connection Error!"));
 
 db.once("open", () => console.log("We're connected to the cloud database!"));
 
-// app.use("/users", userRoutes);
-// app.use("/workouts", workoutRoutes);
+app.use("/users", userRoutes);
+app.use("/movies", movieRoutes);
 
 if(require.main === module){
 	app.listen(process.env.PORT || 4000, () => {

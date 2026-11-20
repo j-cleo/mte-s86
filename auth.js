@@ -21,8 +21,6 @@ module.exports.verify = (req, res, next) => {
     } else {
         token = token.slice(7, token.length);
 
-        console.log(token);
-
         jwt.verify(token, "MovieCatalog", (err, decodedToken) => {
             if(err) {
                 return res.status(403).send({
